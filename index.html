@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProcureFlow | Contract Management & Procurement</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <p class="eyebrow">Procurement Workspace</p>
+          <h1>ProcureFlow</h1>
+          <p class="sidebar-copy">
+            Contract management and procurement in one shared operating view.
+          </p>
+        </div>
+
+        <div class="sidebar-card">
+          <span class="status-dot"></span>
+          <div>
+            <p class="sidebar-label">Pipeline health</p>
+            <strong>27 requests on track</strong>
+          </div>
+        </div>
+
+        <ul class="sidebar-metrics">
+          <li>
+            <span>Total spend under review</span>
+            <strong>$4.8M</strong>
+          </li>
+          <li>
+            <span>Contracts expiring in 90 days</span>
+            <strong>6</strong>
+          </li>
+          <li>
+            <span>Average cycle time</span>
+            <strong>18 days</strong>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Contract Management & Procurement Platform</p>
+            <h2>Coordinate intake, approvals, and contract visibility.</h2>
+            <p>
+              Route new purchasing needs, monitor pending approvals, manage active
+              agreements, and keep legacy contracts searchable in one place.
+            </p>
+          </div>
+          <div class="hero-actions">
+            <button class="primary-button" type="button">Create sourcing event</button>
+            <button class="secondary-button" type="button">Export portfolio</button>
+          </div>
+        </header>
+
+        <section class="overview-grid" aria-label="Portfolio overview">
+          <article class="overview-card">
+            <p>Open intake requests</p>
+            <strong>14</strong>
+            <span>5 added this week</span>
+          </article>
+          <article class="overview-card">
+            <p>Pending stakeholder approvals</p>
+            <strong>9</strong>
+            <span>3 need action today</span>
+          </article>
+          <article class="overview-card">
+            <p>Active managed contracts</p>
+            <strong>38</strong>
+            <span>96% obligations mapped</span>
+          </article>
+          <article class="overview-card">
+            <p>Legacy contracts archived</p>
+            <strong>112</strong>
+            <span>17 missing metadata</span>
+          </article>
+        </section>
+
+        <section class="workspace-card">
+          <div class="tabs" role="tablist" aria-label="Platform sections">
+            <button class="tab is-active" role="tab" aria-selected="true" aria-controls="new-request" id="tab-new-request" data-tab="new-request">
+              New Request
+            </button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="pending-requests" id="tab-pending-requests" data-tab="pending-requests">
+              Pending Requests
+            </button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="active-contracts" id="tab-active-contracts" data-tab="active-contracts">
+              Active Contracts
+            </button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="legacy-contracts" id="tab-legacy-contracts" data-tab="legacy-contracts">
+              Legacy Contracts
+            </button>
+          </div>
+
+          <div class="tab-panel is-active" id="new-request" role="tabpanel" aria-labelledby="tab-new-request">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Intake</p>
+                <h3>Launch a new procurement request</h3>
+              </div>
+              <span class="chip">Guided workflow</span>
+            </div>
+
+            <div class="content-grid two-column">
+              <form class="request-form">
+                <label>
+                  Request title
+                  <input type="text" placeholder="Cloud security assessment" />
+                </label>
+                <label>
+                  Department
+                  <select>
+                    <option>Information Security</option>
+                    <option>Finance</option>
+                    <option>Operations</option>
+                    <option>Legal</option>
+                  </select>
+                </label>
+                <label>
+                  Estimated budget
+                  <input type="text" placeholder="$120,000" />
+                </label>
+                <label>
+                  Supplier preference
+                  <input type="text" placeholder="Preferred or net-new supplier" />
+                </label>
+                <label class="full-span">
+                  Scope and justification
+                  <textarea rows="5" placeholder="Describe the business need, expected outcome, and timeline."></textarea>
+                </label>
+                <button class="primary-button full-span" type="submit">Submit request</button>
+              </form>
+
+              <div class="info-stack">
+                <article class="detail-card accent-card">
+                  <h4>Auto-routing rules</h4>
+                  <ul>
+                    <li>IT and security requests trigger review from Security and Legal.</li>
+                    <li>Budgets above $100K require finance approval before sourcing.</li>
+                    <li>Net-new suppliers create a vendor onboarding task automatically.</li>
+                  </ul>
+                </article>
+                <article class="detail-card">
+                  <h4>Request checklist</h4>
+                  <ul>
+                    <li>Attach scope of work and target start date.</li>
+                    <li>Confirm budget owner and cost center.</li>
+                    <li>Identify contract type: MSA, SOW, PO, or amendment.</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="pending-requests" role="tabpanel" aria-labelledby="tab-pending-requests" hidden>
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Approval Queue</p>
+                <h3>Track pending requests and bottlenecks</h3>
+              </div>
+              <span class="chip warning-chip">3 need action today</span>
+            </div>
+
+            <div class="table-card">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Request</th>
+                    <th>Owner</th>
+                    <th>Stage</th>
+                    <th>Value</th>
+                    <th>Due</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HRIS implementation partner</td>
+                    <td>Morgan Lee</td>
+                    <td><span class="badge amber">Legal review</span></td>
+                    <td>$180,000</td>
+                    <td>Today</td>
+                  </tr>
+                  <tr>
+                    <td>AP automation renewal</td>
+                    <td>Jules Park</td>
+                    <td><span class="badge blue">Finance approval</span></td>
+                    <td>$95,000</td>
+                    <td>Mar 23</td>
+                  </tr>
+                  <tr>
+                    <td>Warehouse maintenance RFP</td>
+                    <td>Rina Patel</td>
+                    <td><span class="badge purple">Supplier selection</span></td>
+                    <td>$310,000</td>
+                    <td>Mar 28</td>
+                  </tr>
+                  <tr>
+                    <td>Customer support BPO expansion</td>
+                    <td>Alex Rivera</td>
+                    <td><span class="badge red">Executive approval</span></td>
+                    <td>$1,200,000</td>
+                    <td>Apr 2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="active-contracts" role="tabpanel" aria-labelledby="tab-active-contracts" hidden>
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Managed Portfolio</p>
+                <h3>Monitor active contracts, renewals, and obligations</h3>
+              </div>
+              <span class="chip success-chip">12 renewals upcoming</span>
+            </div>
+
+            <div class="contract-grid">
+              <article class="detail-card">
+                <div class="contract-heading">
+                  <h4>Northstar Cybersecurity</h4>
+                  <span class="badge green">Active</span>
+                </div>
+                <p>MSA + annual SOW for managed detection response.</p>
+                <ul>
+                  <li>Value: $420,000 ARR</li>
+                  <li>Renewal: Jun 30, 2026</li>
+                  <li>Owner: Security Operations</li>
+                </ul>
+              </article>
+              <article class="detail-card">
+                <div class="contract-heading">
+                  <h4>Atlas Freight Systems</h4>
+                  <span class="badge blue">In compliance</span>
+                </div>
+                <p>Regional logistics agreement with SLA tracking enabled.</p>
+                <ul>
+                  <li>Value: $860,000 annual</li>
+                  <li>Renewal: Sep 15, 2026</li>
+                  <li>Owner: Supply Chain</li>
+                </ul>
+              </article>
+              <article class="detail-card">
+                <div class="contract-heading">
+                  <h4>Lighthouse Analytics</h4>
+                  <span class="badge amber">Review pricing</span>
+                </div>
+                <p>Business intelligence tooling contract pending QBR benchmark review.</p>
+                <ul>
+                  <li>Value: $210,000 annual</li>
+                  <li>Renewal: May 11, 2026</li>
+                  <li>Owner: Finance Systems</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="legacy-contracts" role="tabpanel" aria-labelledby="tab-legacy-contracts" hidden>
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Archive</p>
+                <h3>Search legacy contracts and migration status</h3>
+              </div>
+              <span class="chip">112 archived records</span>
+            </div>
+
+            <div class="content-grid two-column">
+              <article class="detail-card">
+                <h4>Archive search</h4>
+                <div class="search-box">
+                  <input type="search" placeholder="Search vendor, agreement type, or date" />
+                  <button class="secondary-button" type="button">Search</button>
+                </div>
+                <ul>
+                  <li>Legacy ERP maintenance agreement — expired Dec 2022</li>
+                  <li>Facilities staffing addendum — terminated Aug 2021</li>
+                  <li>On-prem backup appliance lease — sunset Jan 2020</li>
+                </ul>
+              </article>
+              <article class="detail-card accent-card">
+                <h4>Migration progress</h4>
+                <p>Digitization is 85% complete with metadata normalization focused on older amendments and scanned PDFs.</p>
+                <ul>
+                  <li>95 contracts OCR processed</li>
+                  <li>17 records pending owner assignment</li>
+                  <li>6 contracts need retention policy review</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
